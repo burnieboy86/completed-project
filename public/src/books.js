@@ -2,8 +2,12 @@ function findAuthorById(authors, id) {
   return authors.find(author => author.id === id);
 }
 
+function stupidHelperFunction(books, id) {
+  return books.filter(bookId => bookId.id === id)[0];
+}
+
 function findBookById(books, id) {
-  return books.find(bookId => bookId.id === id);
+  return stupidHelperFunction(books, id);
 }
 
 function partitionBooksByBorrowedStatus(books) {
